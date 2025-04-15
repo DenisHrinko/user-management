@@ -18,7 +18,7 @@
 
         <div>
             <label>Mail</label>
-            <input type="email" name="email" value="{{ $user->email ?? '' }}" required>
+            <input type="email" name="email" value="{{ $user->email ?? '' }}" required @readonly(isset($user))>
             @error('email')
             <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
